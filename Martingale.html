@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martingale</title>
+    <script src="Martingale.js"></script>
+    <link rel="stylesheet" href="Martingale.css">
+</head>
+<body>
+    <header>
+        <h1>Crie seu Martingale</h1>
+    </header>
+    <main>
+        <section id="selecao">
+            <h2>
+                Selecione abaixo a moeda de sua preferencia
+            </h2>
+            <p id="moe">
+                <input type="radio" name="moeda" id="brl" checked>
+                <label for="brl" class="pmoeda">Real (BRL)
+                </label>
+                <input type="radio" name="moeda" id="usd">
+                <label for="usd" class="pmoeda">Dollar (USD)</label>
+                <input type="radio" name="moeda" id="eur">
+                <label for="eur" class="pmoeda">Euro (EUR)</label>
+            </p>
+        </section>
+
+        <section id="dados">
+            <p>
+                <label for="inum">Digite o valor inicial (somente numerais): </label>
+                <input type="number" name="num " id="inum" required placeholder="Ex: 50">
+            </p>
+            <p>
+                <label for="imax">Digite o número de etapas que seu Martingale terá: </label>
+                <input type="number" name="max" id="imax" required placeholder="Ex: 5">
+            </p>
+            <p>
+                <div id="res"><strong>Resultado</strong></div>
+            </p>
+
+        </section>
+        <p id ="pbotao">
+            <input type="button" value="Calcular" onclick="martingale()" class ="botao">
+
+            <a href="http://127.0.0.1:5500/html/Martingale/Martingale.html"><input type="button" value="Limpar" class ="botao"></a>
+        </p>
+    </main>
+    <footer>
+        <p>Criado por &copy;Bismarck Rudvan</p>
+    </footer>
+</body>
+</html>
