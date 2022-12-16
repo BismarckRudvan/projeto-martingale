@@ -4,10 +4,10 @@ function martingale(){
     let max = document.getElementById('imax')
     let odd = document.getElementById('odd')
     let nodd = Number(odd.value)
-    let perda = -numero
+    let perda = -numero*nodd
     let meta = numero*nodd
     let apostado = 0
-    let cont = numero
+    let cont = 0
     let contgale = 0
     let contgale2 = 0
     let banca = numero
@@ -20,7 +20,7 @@ function martingale(){
     }else{
         while(contgale < numgale){
             while(perda < meta){
-                cont += cont*nodd - cont
+                cont += numero*nodd - numero
                 perda = cont
                 contgale2++
             }
