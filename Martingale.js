@@ -4,29 +4,28 @@ function martingale(){
     let max = document.getElementById('imax')
     let odd = document.getElementById('odd')
     let nodd = Number(odd.value)
-    let perda = -numero*nodd
+    let perda = 0
     let meta = numero*nodd
-    let apostado = 0
     let cont = 0
     let contgale = 0
-    let contgale2 = 0
+    let contgale2 = -1
     let banca = numero
     let etapa = []
     let numgale = Number(max.value)
     let res = document.getElementById('res')
-
     if(a.value.length == 0 || max.value.length == 0 || odd.value.length == 0){
         window.alert (`POR FAVOR, PREENCHA TODOS OS CAMPOS!${perda}`)
     }else{
         while(contgale < numgale){
-            while(perda < meta){
+            while(cont < meta){
                 cont += numero*nodd - numero
-                perda = cont
+                perda = perda + cont
                 contgale2++
             }
-            perda = -numero
-            perda -= -cont*contgale2
-            etapa.push(perda) 
+            perda = cont*contgale2
+            etapa.push(perda)
+            numero = perda
+            meta = meta*numero 
             contgale++
         }
         let vitoria = banca + Number(a.value)
