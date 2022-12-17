@@ -7,6 +7,7 @@
     <title>Martingale</title>
     <script src="Martingale.js"></script>
     <link rel="stylesheet" href="Martingale.css">
+    <link rel="stylesheet" href="MartingaleCell.css" media="screen and (max-width: 700px)">
     <link rel="shortcut icon" href="Imagens/betfair.ico" type="image/x-icon">
 </head>
 <body>
@@ -30,18 +31,18 @@
         </section>
 
         <section id="dados">
-            <p>
+            <p>Martingale com odd: 2.00</p><br>
+
+            <p id="valor">
                 <label for="inum">Digite o valor inicial (somente numerais): </label>
-                <input type="number" name="num " id="inum" required>
             </p>
-            <p>
-                <label for="odd">Selecione a odd desejada: </label>
-                <input type="number" name="odd" id="odd">
+            <input type="number" name="number" id="inum"><br><br>
+
+            <p id="etapa">
+                <label for="imax">Digite o número de etapas do seu Martingale: </label>
             </p>
-            <p>
-                <label for="imax">Digite o número de etapas que seu Martingale terá: </label>
-                <input type="number" name="max" id="imax" required>
-            </p>
+            <input type="number" name="max" id="imax">
+            
             <p>
                 <div id="res"><strong>Resultado</strong></div>
             </p>
