@@ -111,12 +111,12 @@ section#dados p{
 #res{
     display: inline-block;
     margin: auto;
-    padding: 15px;
+    padding: 10px 80px;
     margin-top: 20px;
     text-align: center;
     background-color: black;
     color: #FFB80C;
-    border-radius: 7px;
+    border-radius: 20px 0px 20px 0px;
     margin: auto;
 }
 
