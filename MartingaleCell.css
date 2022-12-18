@@ -15,3 +15,8 @@ header h1{
 #res{
     min-width: 60vw;
 }
+
+#res2{
+    width: 200px;
+    font-size: 1.2em;
+}

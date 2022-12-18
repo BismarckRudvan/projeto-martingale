@@ -114,11 +114,23 @@ section#dados p{
     padding: 10px;
     min-width: 300px;
     margin-top: 20px;
+    border-radius: 10px;
     text-align: center;
     background-color: black;
     color: #FFB80C;
-    border-radius: 20px 0px 20px 0px;
     margin: auto;
+}
+
+#res2{
+    display: block;
+    margin: auto;
+    width: 400px;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    background-color: black;
+    color: #FFB80C;
+    margin: auto;
+    font-size: 1.5em;
 }
 
 footer{

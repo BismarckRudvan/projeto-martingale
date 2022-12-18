@@ -8,6 +8,7 @@ function martingale(){
     let etapa = []
     let numgale = Number(max.value)
     let res = document.getElementById('res')
+    let moeda = document.getElementsByName ('moeda')
 
     if(a.value.length == 0 || max.value.length == 0){
         window.alert (`POR FAVOR, PREENCHA TODOS OS CAMPOS!`)
@@ -20,13 +21,39 @@ function martingale(){
         }
 
         vitoria = banca + Number(a.value)
-        if(document.getElementsByName('moeda')[0].checked){
-            res.innerHTML = `Você precisa ter <strong>${banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'brl'})}</strong> para fazer este Martingale! <br><br><br> Sua aposta iniciará em <strong>${Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'brl'})}</strong>, e seu Martingale seguirá as seguintes etapas abaixo: <br><br>(<strong>${etapa.toLocaleString('pt-br' , {style: 'currency' , currency: 'brl'})}</strong>)<br><br><br> E em caso de vitória, você ficará com um valor total de <strong>${vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'brl'})}</strong>!`}
 
-            else if(document.getElementsByName('moeda')[1].checked){
-                res.innerHTML = `Você precisa ter <strong>${banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'usd'})}</strong> para fazer este Martingale! <br><br><br> Sua aposta iniciará em <strong>${Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'usd'})}</strong>, e seu Martingale seguirá as seguintes etapas abaixo: <br><br>(<strong>${etapa.toLocaleString('pt-br' , {style: 'currency' , currency: 'usd'})}</strong>)<br><br><br> E em caso de vitória, você ficará com um valor total de <strong>${vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'usd'})}</strong>!`}
+        if(moeda[0].checked){
+            banca = banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'brl'})
+            a = Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'brl'})
+            vitoria = vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'brl'})
 
-                else if (document.getElementsByName('moeda')[2].checked){
-                    res.innerHTML = `Você precisa ter <strong>${banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})}</strong> para fazer este Martingale! <br><br><br> Sua aposta iniciará em <strong>${Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})}</strong>, e seu Martingale seguirá as seguintes etapas abaixo: <br><br>(<strong>${etapa.toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})}</strong>)<br><br><br> E em caso de vitória, você ficará com um valor total de <strong>${vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'eur'})}</strong>!`}
+        } else if (moeda[1].checked){
+            banca = banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'usd'})
+            a = Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'usd'})
+            vitoria = vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'usd'})
+
+        } else if (moeda[2].checked){
+            banca = banca.toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})
+            a = Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})
+            vitoria = vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'eur'})
+        }
+        for (let pos = 0; pos < etapa.length; pos++){
+            if(moeda[0].checked){
+                res.innerHTML = `Para fazer este Martingale, você precisa ter <strong>${banca}</strong>! <br><br> Sua aposta iniciará em <strong>${a}</strong>! <br><br> Em caso de vitória, você ficará com um valor total de <strong>${vitoria}</strong>!<br><br>Seu Martingale seguirá as seguintes etapas abaixo: <br><br>`
+                res2.innerHTML += `<strong>${etapa[pos].toLocaleString ('pt-br' , {style: 'currency' , currency: 'brl'})}</strong><br>`}
+        }
+
+        for (let pos = 0; pos < etapa.length; pos++){
+            if(moeda[1].checked){
+                res.innerHTML = `Para fazer este Martingale, você precisa ter <strong>${banca}</strong>! <br><br> Sua aposta iniciará em <strong>${a}</strong>! <br><br> Em caso de vitória, você ficará com um valor total de <strong>${vitoria}</strong>!<br><br>Seu Martingale seguirá as seguintes etapas abaixo: <br><br>`
+                res2.innerHTML += `<strong>${etapa[pos].toLocaleString ('pt-br' , {style: 'currency' , currency: 'usd'})}</strong><br>`}
+        }
+
+        for (let pos = 0; pos < etapa.length; pos++){
+            if(moeda[2].checked){
+                res.innerHTML = `Para fazer este Martingale, você precisa ter <strong>${banca}</strong>! <br><br> Sua aposta iniciará em <strong>${a}</strong>! <br><br> Em caso de vitória, você ficará com um valor total de <strong>${vitoria}</strong>!<br><br>Seu Martingale seguirá as seguintes etapas abaixo: <br><br>`
+                res2.innerHTML += `<strong>${etapa[pos].toLocaleString ('pt-br' , {style: 'currency' , currency: 'eur'})}</strong><br>`}
+        }
+
     }
-}
+}   
