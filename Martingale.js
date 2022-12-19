@@ -36,6 +36,8 @@ function martingale(){
             a = Number(a.value).toLocaleString('pt-br' , {style: 'currency' , currency: 'eur'})
             vitoria = vitoria.toLocaleString('pt-br' , {style:'currency' , currency: 'eur'})
         }
+
+        res2.innerHTML = ''
         for (let pos = 0; pos < etapa.length; pos++){
             if(moeda[0].checked){
                 res.innerHTML = `Para fazer este Martingale, você precisa ter <strong>${banca}</strong>! <br><br> Sua aposta iniciará em <strong>${a}</strong>! <br><br> Em caso de vitória, você ficará com um valor total de <strong>${vitoria}</strong>!<br><br>Seu Martingale seguirá as seguintes etapas abaixo: <br><br>`
