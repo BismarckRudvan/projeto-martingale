@@ -1,15 +1,14 @@
 function martingale(){
     let a = document.getElementById('inum')
-    let numero = Number(a.value)
     let max = document.getElementById('imax')
+    let res = document.getElementById('res')
+    let moeda = document.getElementsByName ('moeda')
+    let numero = Number(a.value)
     let contgale = 0
     let banca = numero
     let vitoria = 0
     let etapa = []
     let numgale = Number(max.value)
-    let res = document.getElementById('res')
-    let moeda = document.getElementsByName ('moeda')
-
     if(a.value.length == 0 || max.value.length == 0){
         window.alert (`POR FAVOR, PREENCHA TODOS OS CAMPOS!`)
     }else{
@@ -56,4 +55,14 @@ function martingale(){
         }
 
     }
-}   
+}
+
+function limpar(){
+    let a = document.getElementById('inum')
+    let max = document.getElementById('imax')
+    res.innerHTML= "<strong>Resultado</strong>"
+    res2.innerHTML= ""
+    a.value = ''
+    max.value = ''
+    a.focus()
+}
