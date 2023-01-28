@@ -59,6 +59,7 @@ h2{
 
 section#dados{
     width: 80vw;
+    max-width: 900px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     margin: auto;
